@@ -1,6 +1,10 @@
 <?php
     require_once './clases/leer.php';
     $resultado = Leer::get("r");
+
+    if(!is_dir("./archivos_subidos")){
+        mkdir("./archivos_subidos", 0777);
+    }
 ?>
 <!DOCTYPE html>
 <!--
